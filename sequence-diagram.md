@@ -1,3 +1,6 @@
+# **Main Project Interaction Diagram**
+
+```mermaid
 sequenceDiagram
     autonumber
     actor User
@@ -46,3 +49,4 @@ sequenceDiagram
 
     %% Report back to user
     OR-->>User: Completed scene + status\n(e.g. \"Scene written, edited, summarized\")
+```

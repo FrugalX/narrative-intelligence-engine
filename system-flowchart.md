@@ -1,3 +1,6 @@
+# **Main Project FlowChart**
+
+```mermaid
 flowchart TD
     subgraph UserInterface[User Interface / Web App]
         UI[User Commands\n(e.g., Write Scene, Revise Chapter, Add Subplot)]
@@ -64,3 +67,4 @@ flowchart TD
 
     %% Results to user
     OR --> UI
+```
