@@ -3,7 +3,7 @@
 ```mermaid
 flowchart TD
     subgraph UserInterface[User Interface / Web App]
-        UI[User Commands\n(e.g., Write Scene, Revise Chapter, Add Subplot)]
+        UI[User Commands (e.g., Write Scene, Revise Chapter, Add Subplot)]
     end
 
     subgraph Orchestrator[Orchestrator]
@@ -11,7 +11,7 @@ flowchart TD
     end
 
     subgraph Planning[Planner]
-        PL[Structure & Narrative Blueprint\n(Acts → Chapters → Scenes)]
+        PL[Structure & Narrative Blueprint (Acts → Chapters → Scenes)]
     end
 
     subgraph Writing[Writer]
@@ -27,13 +27,13 @@ flowchart TD
     end
 
     subgraph Memory[Codex Manager]
-        CM[Canonical Knowledge\nCharacters, Events, World Rules]
+        CM[Canonical Knowledge Characters, Events, World Rules]
     end
 
     subgraph Storage[Memory Systems]
         DB[(PostgreSQL Relational)]
-        VEC[(Vector Store\npgvector + HNSW)]
-        DOC[(Document Store\nDrafts & Versions)]
+        VEC[(Vector Store pgvector + HNSW)]
+        DOC[(Document Store Drafts & Versions)]
     end
 
     %% User to Orchestrator
