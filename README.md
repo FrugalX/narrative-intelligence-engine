@@ -9,6 +9,8 @@ Build a multi-agent, memory-driven AI system capable of planning and writing ful
 [Interaction Diagram](sequence-diagram.md)
 
 [System FlowChart](system-flowchart.md)
+
+[Getting Started Guide](getting-started.md)
 <br>
 <br>
 
