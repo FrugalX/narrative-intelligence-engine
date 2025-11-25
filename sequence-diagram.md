@@ -16,11 +16,11 @@ sequenceDiagram
     User->>OR: Request (e.g. \"Write next scene\")
 
     %% Plan / refine scene
-    OR->>PL: Get or refine scene plan\n(POV, setting, beats, outcome)
+    OR->>PL: Get or refine scene plan (POV, setting, beats, outcome)
     PL-->>OR: Scene plan (structured JSON/YAML)
 
     %% Fetch world/context knowledge
-    OR->>CM: Query relevant facts\n(characters, locations, prior events)
+    OR->>CM: Query relevant facts (characters, locations, prior events)
     CM-->>OR: Canonical facts & constraints
 
     %% Draft prose
@@ -29,7 +29,7 @@ sequenceDiagram
 
     %% Edit / continuity check
     OR->>ED: Send draft + plan slice + codex facts
-    ED-->>OR: Annotated text + issues report\n(optional light edits)
+    ED-->>OR: Annotated text + issues report (optional light edits)
 
     alt Revisions required
         OR->>WR: Request revision based on editor feedback
@@ -41,12 +41,12 @@ sequenceDiagram
     SU-->>OR: Multi-level summaries + extracted facts
 
     %% Update codex and planner
-    OR->>CM: Update canonical records\n(characters, events, world facts)
+    OR->>CM: Update canonical records (characters, events, world facts)
     CM-->>OR: Confirmation + any conflict flags
 
-    OR->>PL: Provide updated summaries\nfor pacing/arc adjustments
+    OR->>PL: Provide updated summaries for pacing/arc adjustments
     PL-->>OR: Optional updated downstream plan
 
     %% Report back to user
-    OR-->>User: Completed scene + status\n(e.g. \"Scene written, edited, summarized\")
+    OR-->>User: Completed scene + status (e.g. \"Scene written, edited, summarized\")
 ```
