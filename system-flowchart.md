@@ -6,31 +6,31 @@ flowchart TD
         UI[User Commands\n(e.g., Write Scene, Revise Chapter, Add Subplot)]
     end
 
-    subgraph Orchestrator["🎛️ Orchestrator"]
+    subgraph Orchestrator[Orchestrator]
         OR[Workflow & Task Manager]
     end
 
-    subgraph Planning["🧠 Planner"]
+    subgraph Planning[Planner]
         PL[Structure & Narrative Blueprint\n(Acts → Chapters → Scenes)]
     end
 
-    subgraph Writing["✍️ Writer"]
+    subgraph Writing[Writer]
         WR[Draft Prose Generator]
     end
 
-    subgraph Editing["🛠️ Editor / Continuity"]
+    subgraph Editing[Editor / Continuity]
         ED[Continuity / Quality Review]
     end
 
-    subgraph Summarizing["🧾 Summarizer"]
+    subgraph Summarizing[Summarizer]
         SU[Summaries + Fact Extraction]
     end
 
-    subgraph Memory["📚 Codex Manager"]
+    subgraph Memory[Codex Manager]
         CM[Canonical Knowledge\nCharacters, Events, World Rules]
     end
 
-    subgraph Storage["🗄 Memory Systems"]
+    subgraph Storage[Memory Systems]
         DB[(PostgreSQL Relational)]
         VEC[(Vector Store\npgvector + HNSW)]
         DOC[(Document Store\nDrafts & Versions)]
