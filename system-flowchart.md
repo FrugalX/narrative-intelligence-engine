@@ -2,38 +2,38 @@
 
 ```mermaid
 flowchart TD
-    subgraph UserInterface[User Interface / Web App]
-        UI[User Commands (e.g., Write Scene, Revise Chapter, Add Subplot)]
+    subgraph UserInterface["User Interface / Web App"]
+        UI["User Commands (e.g., Write Scene, Revise Chapter, Add Subplot)"]
     end
 
-    subgraph Orchestrator[Orchestrator]
-        OR[Workflow & Task Manager]
+    subgraph Orchestrator["Orchestrator"]
+        OR["Workflow & Task Manager"]
     end
 
-    subgraph Planning[Planner]
-        PL[Structure & Narrative Blueprint (Acts → Chapters → Scenes)]
+    subgraph Planning["Planner"]
+        PL["Structure & Narrative Blueprint (Acts → Chapters → Scenes)"]
     end
 
-    subgraph Writing[Writer]
-        WR[Draft Prose Generator]
+    subgraph Writing["Writer"]
+        WR["Draft Prose Generator"]
     end
 
-    subgraph Editing[Editor / Continuity]
-        ED[Continuity / Quality Review]
+    subgraph Editing["Editor / Continuity"]
+        ED["Continuity / Quality Review"]
     end
 
-    subgraph Summarizing[Summarizer]
-        SU[Summaries + Fact Extraction]
+    subgraph Summarizing["Summarizer"]
+        SU["Summaries + Fact Extraction"]
     end
 
-    subgraph Memory[Codex Manager]
-        CM[Canonical Knowledge Characters, Events, World Rules]
+    subgraph Memory["Codex Manager"]
+        CM["Canonical Knowledge Characters, Events, World Rules"]
     end
 
-    subgraph Storage[Memory Systems]
-        DB[(PostgreSQL Relational)]
-        VEC[(Vector Store pgvector + HNSW)]
-        DOC[(Document Store Drafts & Versions)]
+    subgraph Storage["Memory Systems"]
+        DB["PostgreSQL Relational"]
+        VEC["Vector Store pgvector + HNSW"]
+        DOC["Document Store Drafts & Versions"]
     end
 
     %% User to Orchestrator
