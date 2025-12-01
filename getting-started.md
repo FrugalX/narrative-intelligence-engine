@@ -82,12 +82,7 @@ A working dev environment with the ability to run test pipelines.
 
 ## **Step 4: Expand Toward Project Goals**
 
-Once you understand the system and can run agents confidently, begin tackling structured tasks such as:
-
-* Adding new fields to planning schemas
-* Building UI elements to visualize story structure
-* Integrating Codex queries and vector retrieval
-* Running the scene pipeline end-to-end
+Once you understand the system and can run agents confidently, begin tackling structured tasks.
 
 ### 🎯 Outcome
 
