@@ -6,6 +6,7 @@ sequenceDiagram
     actor User
 
     participant OR as Orchestrator
+    participant ID as Ideation
     participant PL as Planner
     participant CM as Codex Manager
     participant WR as Writer
@@ -13,7 +14,11 @@ sequenceDiagram
     participant SU as Summarizer
 
     %% User initiates work
-    User->>OR: Request (e.g. \"Write next scene\")
+    User->>OR: Request (e.g. \"Write next scene\" / \"Create story idea\")
+
+    %% Optional ideation phase (early or on request)
+    OR->>ID: Explore / refine story concept
+    ID-->>OR: Refined concept, themes, direction
 
     %% Plan / refine scene
     OR->>PL: Get or refine scene plan (POV, setting, beats, outcome)

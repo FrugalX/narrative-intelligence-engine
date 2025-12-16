@@ -10,6 +10,10 @@ flowchart TD
         OR["Workflow & Task Manager"]
     end
 
+    subgraph Ideation["Ideation Agent"]
+        ID["Concept Exploration & Brainstorming"]
+    end
+
     subgraph Planning["Planner"]
         PL["Structure & Narrative Blueprint (Acts → Chapters → Scenes)"]
     end
@@ -39,6 +43,10 @@ flowchart TD
     %% User to Orchestrator
     UI --> OR
 
+    %% Ideation phase (optional / early)
+    OR --> ID
+    ID --> OR
+    
     %% Planning phase
     OR --> PL
     PL --> CM

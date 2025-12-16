@@ -12,6 +12,7 @@ Our mission is to fix that.
 We’re creating an **AI-powered long-form writing companion**, a system that doesn’t just generate paragraphs, but actually **remembers, plans, and reasons** across an entire book project.
 
 Think of it as a team of specialized AI collaborators (agents):
+- An **Ideator** that develops concepts and facilitates brainstorming,
 - A **Planner** that outlines the story,
 - A **Writer** that drafts scenes in the chosen style,
 - An **Editor** that maintains consistency and tone,

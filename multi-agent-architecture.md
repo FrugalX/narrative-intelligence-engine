@@ -1,6 +1,6 @@
 # 🧩 Multi-Agent Architecture Overview
 
-This document describes how the six core agents — **Planner, Writer, Editor, Summarizer, Codex Manager, Orchestrator** — work together as a coordinated system to plan, write, and refine long-form books.
+This document describes how the seven core agents — **Ideation, Planner, Writer, Editor, Summarizer, Codex Manager, Orchestrator** — work together as a coordinated system to plan, write, and refine long-form books.
 
 The goal is to provide a clear mental model and implementation guide for how information and control flow through the architecture.
 
@@ -10,6 +10,7 @@ The goal is to provide a clear mental model and implementation guide for how inf
 
 At a high level, the system behaves like a virtual writing room composed of specialized collaborators:
 
+* The **Ideation Agent** explores and generates raw story concepts and directions.
 * The **Planner** designs the narrative blueprint.
 * The **Writer** turns plans into prose.
 * The **Editor** enforces quality and continuity.
@@ -25,6 +26,7 @@ These agents do **not** operate in isolation. They exchange structured artifacts
 
 | Agent                   | Primary Role                                                           | Key Outputs                                                                            |
 | ----------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Ideation** | Explores and generates story concepts and creative directions | Story premises, themes, hooks, concept alternatives |
 | **Planner**             | Designs narrative structure and progression                            | Book/act/chapter/scene plans in structured form (JSON/YAML)                            |
 | **Writer**              | Generates narrative prose from scene plans                             | Scene/chapter text, alternate drafts                                                   |
 | **Editor / Continuity** | Reviews and refines prose for alignment, consistency, and readability  | Annotated text, issues reports, suggested revisions                                    |
@@ -72,16 +74,19 @@ These artifacts are stored across:
 
 **Workflow (managed by Orchestrator):**
 
-1. **Orchestrator → Planner**
+1. **Orchestrator → Ideation**
+   * Input: user prompt + creative constraints.
+   * Output: refined story concept(s), themes, and high-level direction.
 
-   * Input: user prompt + constraints + any existing codex/plan data.
-   * Output: book-level plan (acts → chapters → scenes) with key beats.
+2. **Orchestrator → Planner**
+   * Input: selected concept from Ideation + constraints + any existing codex/plan data.
+   * Output: book-level plan (acts → chapters → scenes).
 
-2. **Planner → Codex Manager**
+3. **Planner → Codex Manager**
 
    * Codex Manager ingests high-level entities: initial cast list, locations, world rules, key events.
 
-3. **Orchestrator**
+4. **Orchestrator**
 
    * Marks planning phase complete.
    * Presents outline to user for review and possible modifications.
@@ -175,6 +180,7 @@ A simplified, conceptual flow for a single scene:
 
 ```text
 User → Orchestrator
+  → Ideation (concept exploration)
   → Planner (scene blueprint)
     → Codex Manager (update high-level expectations)
   → Codex Manager (fetch relevant facts)
@@ -195,6 +201,7 @@ This pattern extends to acts, chapters, and global revisions.
 
 The architecture deliberately enforces **clear boundaries**:
 
+* **Ideation**: Explores *what the story could be* through brainstorming and concept generation.
 * **Planner**: Decides *what* should happen and *why* at a structural level.
 * **Writer**: Decides *how it reads* as narrative prose.
 * **Editor**: Judges and refines *how well it works* in terms of alignment, continuity, and quality.

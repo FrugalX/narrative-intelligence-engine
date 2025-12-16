@@ -23,7 +23,7 @@ It defines *what* happens, *when* it happens, *who* it happens to, and *why it m
 
 ### **Expected Inputs**
 
-* User prompt, summary, or initial idea *(e.g., "A sci-fi mystery aboard a drifting starship controlled by a rogue AI")*
+* Refined story concept from the Ideation Agent, or a user-provided prompt / synopsis *(e.g., "A sci-fi mystery aboard a drifting starship controlled by a rogue AI")*
 * Genre, tone, POV, target word count
 * Optional constraints (themes, pacing goals, characters, tropes to include/avoid)
 * Existing plan state if continuing or revising work in progress
@@ -67,6 +67,7 @@ The Planner is an **iterative** agent: it updates the structure dynamically as n
 
 | Task                       | Responsible Agent   | Not The Planner |
 | -------------------------- | ------------------- | --------------- |
+| Open-ended ideation / brainstorming | Ideation Agent | ❌           |
 | Writing prose              | Writer              | ❌               |
 | Enforcing consistency      | Editor / Continuity | ❌               |
 | Managing knowledge storage | Codex Manager       | ❌               |

@@ -15,6 +15,8 @@ Build a multi-agent, memory-driven AI system capable of planning and writing ful
 <br>
 
 ### Agent Definitions
+[Ideation Agent](ideation-agent.md)
+
 [Planner Agent](planner-agent.md)
 
 [Writer Agent](writer-agent.md)
